@@ -28,14 +28,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/Review.v1.json
+                $ref: ./Review.v1.json
               examples: {}
       operationId: post-v1-message-send-employerId
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/Send-Message-Model.v1.json
+              $ref: ./Send-Message-Model.v1.json
             examples: {}
       security:
         - x-api-key: []

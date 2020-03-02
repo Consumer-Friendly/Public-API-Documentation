@@ -29,14 +29,29 @@ paths:
             application/json:
               schema:
                 $ref: ./Review.v1.json
-              examples: {}
+              examples:
+                Sample Review Schema:
+                  value:
+                    review:
+                      createdAt: '2020-02-21T02:38:17.963Z'
+                      updatedAt: '2020-02-21T02:38:27.145Z'
+                      submittedAt: '2020-02-21T02:38:27.142Z'
+                      tipAmount: 10
+                      feedback: What wonderful service
+                      stars: 5
       operationId: post-v1-message-send-employerId
       requestBody:
         content:
           application/json:
             schema:
               $ref: ./Send-Message-Model.v1.json
-            examples: {}
+            examples:
+              Sample Send Message Schema:
+                value:
+                  toNumber: '9495555555'
+                  toEmail: mycustomer@example.com
+                  agentId: 5e38d81abdc4741e28dda213
+                  statusCallback: 'https://myapi.company.com/statusurl'
       security:
         - x-api-key: []
       description: Sends a message to a particular phone number on behalf of an agent of a company

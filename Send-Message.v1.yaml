@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  title: Consumer Friendly
+  version: '1.0'
+  description: Our public base API for developers
+  contact:
+    name: Chase Roossin
+    email: chase@consumerfriendly.io
+servers:
+  - url: 'https://api.consumerfriendly.io'
+    description: Consumer Friendly Base API
+paths:
+  '/v1/message/send/{employerId}':
+    parameters:
+      - schema:
+          type: string
+        name: employerId
+        in: path
+        required: true
+        description: The identifier of the employer
+    post:
+      summary: Send Message
+      tags:
+        - Send Message
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Review.v1.json
+              examples: {}
+      operationId: post-v1-message-send-employerId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Send-Message-Model.v1.json
+            examples: {}
+      security:
+        - x-api-key: []
+      description: Sends a message to a particular phone number on behalf of an agent of a company
+      parameters:
+        - schema:
+            type: string
+            default: application/json
+          in: header
+          name: Content-Type
+          description: ''
+          required: true
+components:
+  schemas: {}
+  securitySchemes:
+    x-api-key:
+      name: x-api-key
+      type: apiKey
+      in: header

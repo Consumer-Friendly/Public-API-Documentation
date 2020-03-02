@@ -1,0 +1,38 @@
+{
+  "title": "Send Message Model",
+  "type": "object",
+  "x-tags": [
+    "Send Message"
+  ],
+  "properties": {
+    "toNumber": {
+      "type": "string",
+      "example": "9495555555"
+    },
+    "agentId": {
+      "type": "string",
+      "example": "5e38d81abdc4741e28dda21z"
+    },
+    "toEmail": {
+      "type": "string",
+      "example": "test@example.com"
+    },
+    "statusCallback": {
+      "type": "string",
+      "example": "https://api.mycompany.com/status"
+    }
+  },
+  "required": [
+    "toNumber",
+    "agentId"
+  ],
+  "description": "The post body that should be included to send a message",
+  "x-examples": {
+    "Example Send Message": {
+      "toNumber": "9495555555",
+      "toEmail": "mycustomer@example.com",
+      "agentId": "5e38d81abdc4741e28dda213",
+      "statusCallback": "https://myapi.company.com/statusurl"
+    }
+  }
+}

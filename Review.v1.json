@@ -1,0 +1,57 @@
+{
+  "title": "Review",
+  "type": "object",
+  "x-tags": [
+    "Send Message"
+  ],
+  "description": "The object that is returned from sending a message",
+  "x-examples": {
+    "Sample Review": {
+      "review": {
+        "createdAt": "2020-02-21T02:38:17.963Z",
+        "updatedAt": "2020-02-21T02:38:27.145Z",
+        "submittedAt": "2020-02-21T02:38:27.142Z",
+        "tipAmount": 10,
+        "feedback": "What wonderful service",
+        "stars": 5
+      }
+    }
+  },
+  "properties": {
+    "review": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "example": "\"2020-20-21T02:38:17.963Z\""
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "example": "\"2020-20-21T02:38:17.963Z\""
+        },
+        "submittedAt": {
+          "type": "string",
+          "format": "date-time",
+          "example": "\"2020-20-21T02:38:17.963Z\""
+        },
+        "tipAmount": {
+          "type": "number",
+          "example": "10"
+        },
+        "stars": {
+          "type": "number",
+          "example": "5"
+        },
+        "feedback": {
+          "type": "string",
+          "example": "Great customer support experience."
+        }
+      }
+    }
+  },
+  "required": [
+    "review"
+  ]
+}

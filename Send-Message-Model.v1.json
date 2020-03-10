@@ -4,6 +4,15 @@
   "x-tags": [
     "Send Message"
   ],
+  "description": "Note: either toNumber or toEmail must be sent in the payload.  If you send toNumber, we will text, if you send toEmail, we will email, if you send both, we will both text and email",
+  "x-examples": {
+    "Example Send Message": {
+      "toNumber": "9495555555",
+      "toEmail": "mycustomer@example.com",
+      "agentId": "5e38d81abdc4741e28dda213",
+      "statusCallback": "https://myapi.company.com/statusurl"
+    }
+  },
   "properties": {
     "toNumber": {
       "type": "string",
@@ -23,16 +32,6 @@
     }
   },
   "required": [
-    "toNumber",
     "agentId"
-  ],
-  "description": "The post body that should be included to send a message",
-  "x-examples": {
-    "Example Send Message": {
-      "toNumber": "9495555555",
-      "toEmail": "mycustomer@example.com",
-      "agentId": "5e38d81abdc4741e28dda213",
-      "statusCallback": "https://myapi.company.com/statusurl"
-    }
-  }
+  ]
 }

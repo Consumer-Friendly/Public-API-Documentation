@@ -26,7 +26,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ./Review.v1.json
+                $ref: ./models/Review.v1.json
               examples:
                 Sample Review Schema:
                   value:
@@ -42,7 +42,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ./Send-Message-Model.v1.json
+              $ref: ./models/Send-Message-Model.v1.json
             examples:
               Sample Send Message Schema:
                 value:

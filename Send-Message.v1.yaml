@@ -10,7 +10,7 @@ servers:
   - url: 'https://api.consumerfriendly.io'
     description: Consumer Friendly Base API
 paths:
-  '/v1/message/send/{employerId}':
+  '/v1/message/{employerId}/send':
     parameters:
       - schema:
           type: string

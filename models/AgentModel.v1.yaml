@@ -1,0 +1,23 @@
+title: AgentModel
+type: object
+x-tags:
+  - Agents
+properties:
+  _id:
+    type: string
+    description: Consumer Friendly unique identifier
+  firstName:
+    type: string
+    description: Agents first name
+  email:
+    type: string
+    description: Agents email
+required:
+  - _id
+  - firstName
+  - email
+x-examples:
+  Agent:
+    _id: 5de94545a094600e9cbffed2
+    firstName: Robert
+    email: robert@consumerfriendly.io

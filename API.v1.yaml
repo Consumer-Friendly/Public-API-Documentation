@@ -63,6 +63,44 @@ paths:
           required: true
       tags:
         - Message
+  '/v1/user/{employerId}/list':
+    parameters:
+      - schema:
+          type: string
+        name: employerId
+        in: path
+        required: true
+    get:
+      summary: Get Agent List
+      tags:
+        - Agents
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ./models/AgentModel.v1.yaml
+              examples:
+                Agent List Example:
+                  value:
+                    agents:
+                      - _id: 5de94545a094600e9cbffed3
+                        firstName: Robert
+                        email: robert@consumerfriendly.io
+                      - _id: 5de94554a024600e9cbffed4
+                        firstName: Jamie
+                        email: jamie@consumerfriendly.io
+      operationId: get-v1-user-employerId-list
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: x-api-key
+          required: true
+      description: Get the list of employers agents
 components:
   schemas: {}
   securitySchemes:

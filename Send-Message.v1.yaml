@@ -20,8 +20,6 @@ paths:
         description: The identifier of the employer
     post:
       summary: Send Message
-      tags:
-        - Send Message
       responses:
         '200':
           description: OK
@@ -63,6 +61,8 @@ paths:
           name: Content-Type
           description: ''
           required: true
+      tags:
+        - Message
 components:
   schemas: {}
   securitySchemes:

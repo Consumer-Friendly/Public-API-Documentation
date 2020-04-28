@@ -1,9 +1,6 @@
 {
   "title": "Review",
   "type": "object",
-  "x-tags": [
-    "Send Message"
-  ],
   "description": "The object that is returned from sending a message",
   "x-examples": {
     "Sample Review": {
@@ -53,5 +50,8 @@
   },
   "required": [
     "review"
+  ],
+  "x-tags": [
+    "Message"
   ]
 }

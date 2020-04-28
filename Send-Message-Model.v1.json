@@ -1,9 +1,6 @@
 {
   "title": "Send Message Model",
   "type": "object",
-  "x-tags": [
-    "Send Message"
-  ],
   "description": "Note: either toNumber or toEmail must be sent in the payload.  If you send toNumber, we will text, if you send toEmail, we will email, if you send both, we will both text and email",
   "x-examples": {
     "Example Send Message": {
@@ -33,5 +30,8 @@
   },
   "required": [
     "agentId"
+  ],
+  "x-tags": [
+    "Message"
   ]
 }

@@ -22,21 +22,26 @@ paths:
       summary: Send Message
       responses:
         '200':
-          description: OK
+          description: OK - Check tabs for webhook vs initial response
           content:
             application/json:
               schema:
                 $ref: ./models/Review.v1.json
               examples:
-                Sample Review Schema:
+                Sample Review Schema - Posted back to status webhook:
                   value:
                     review:
+                      id: 5f2c566682f51c653236661c
                       createdAt: '2020-02-21T02:38:17.963Z'
                       updatedAt: '2020-02-21T02:38:27.145Z'
                       submittedAt: '2020-02-21T02:38:27.142Z'
                       tipAmount: 10
                       feedback: What wonderful service
                       stars: 5
+                Initial response:
+                  value:
+                    id: 5f2c566682f51c653236661c
+                    status: SENT
       operationId: post-v1-message-send-employerId
       requestBody:
         content:

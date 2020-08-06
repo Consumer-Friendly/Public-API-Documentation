@@ -1,0 +1,18 @@
+{
+  "title": "SendMessageModel",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "x-examples": {
+    "Sample Status": {
+      "id": "5f2c566682f51c653236661c",
+      "status": "SENT"
+    }
+  }
+}

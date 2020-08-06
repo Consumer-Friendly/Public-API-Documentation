@@ -5,6 +5,7 @@
   "x-examples": {
     "Sample Review": {
       "review": {
+        "id": "5f2c566682f51c653236661c",
         "createdAt": "2020-02-21T02:38:17.963Z",
         "updatedAt": "2020-02-21T02:38:27.145Z",
         "submittedAt": "2020-02-21T02:38:27.142Z",
@@ -14,6 +15,9 @@
       }
     }
   },
+  "x-tags": [
+    "Message"
+  ],
   "properties": {
     "review": {
       "type": "object",
@@ -44,14 +48,14 @@
         "feedback": {
           "type": "string",
           "example": "Great customer support experience."
+        },
+        "id": {
+          "type": "string"
         }
       }
     }
   },
   "required": [
     "review"
-  ],
-  "x-tags": [
-    "Message"
   ]
 }
